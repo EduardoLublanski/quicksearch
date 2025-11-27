@@ -1,0 +1,228 @@
+INSERT INTO cliente (
+    cpf,
+    nome,
+    telefone,
+    email,
+    cep,
+    estado,
+    cidade,
+    bairro,
+    rua,
+    numero,
+    complemento
+) VALUES
+      ('32847165902', 'Lucas Martins', '11981234567', 'lucas.martins@gmail.com', '01001000', 'SP', 'São Paulo', 'Sé', 'Praça da Sé', '100', ''),
+      ('67283910547', 'Fernanda Oliveira', '11982345678', 'fernanda.oliveira@gmail.com', '02071000', 'SP', 'São Paulo', 'Santana', 'Rua Dr. Zuquim', '456', ''),
+      ('84937261504', 'João Pedro Santos', '21987654321', 'joaopedro.santos@gmail.com', '20020000', 'RJ', 'Rio de Janeiro', 'Centro', 'Rua Primeiro de Março', '80', ''),
+      ('59283746109', 'Beatriz Ribeiro', '21981239876', 'beatriz.ribeiro@gmail.com', '20230010', 'RJ', 'Rio de Janeiro', 'Botafogo', 'Rua Voluntários da Pátria', '310', 'Apto 202'),
+      ('73194658203', 'Rafael Almeida', '31987654322', 'rafael.almeida@gmail.com', '30130010', 'MG', 'Belo Horizonte', 'Centro', 'Rua da Bahia', '150', ''),
+      ('48629173509', 'Carolina Souza', '31981234568', 'carolina.souza@gmail.com', '30420010', 'MG', 'Belo Horizonte', 'Savassi', 'Avenida do Contorno', '1020', 'Apto 504'),
+      ('59832746105', 'Thiago Ferreira', '11983456789', 'thiago.ferreira@gmail.com', '03323000', 'SP', 'São Paulo', 'Vila Matilde', 'Rua Serra de Bragança', '87', ''),
+      ('47283916504', 'Juliana Lima', '11984561234', 'juliana.lima@gmail.com', '04001000', 'SP', 'São Paulo', 'Moema', 'Avenida Ibirapuera', '600', 'Apto 1203'),
+      ('68329574109', 'Pedro Henrique Costa', '21984327651', 'pedrohenrique.costa@gmail.com', '22250020', 'RJ', 'Rio de Janeiro', 'Botafogo', 'Rua Voluntários da Pátria', '123', ''),
+      ('59283746123', 'Amanda Rocha', '21981234567', 'amanda.rocha@gmail.com', '22451020', 'RJ', 'Rio de Janeiro', 'Barra da Tijuca', 'Avenida Lúcio Costa', '1500', 'Apto 702'),
+      ('73194658218', 'Vinicius Carvalho', '31987651234', 'vinicius.carvalho@gmail.com', '30170020', 'MG', 'Belo Horizonte', 'Funcionários', 'Rua Pernambuco', '250', ''),
+      ('48629173518', 'Larissa Mendes', '31981236789', 'larissa.mendes@gmail.com', '30450040', 'MG', 'Belo Horizonte', 'Savassi', 'Rua Sergipe', '780', ''),
+      ('59832746128', 'Felipe Nunes', '11983459876', 'felipe.nunes@gmail.com', '03170020', 'SP', 'São Paulo', 'Liberdade', 'Rua Galvão Bueno', '350', ''),
+      ('47283916528', 'Isabela Fernandes', '11984563412', 'isabela.fernandes@gmail.com', '04102010', 'SP', 'São Paulo', 'Mooca', 'Rua da Mooca', '510', 'Apto 301'),
+      ('68329574128', 'Gustavo Almeida', '21984327658', 'gustavo.almeida@gmail.com', '22461030', 'RJ', 'Rio de Janeiro', 'Barra da Tijuca', 'Avenida das Américas', '1800', ''),
+      ('59283746134', 'Mariana Souza', '21981236785', 'mariana.souza@gmail.com', '20261040', 'RJ', 'Rio de Janeiro', 'Botafogo', 'Rua Voluntários da Pátria', '210', 'Apto 504'),
+      ('73194658239', 'Eduarda Lima', '31987659876', 'eduarda.lima@gmail.com', '30190050', 'MG', 'Belo Horizonte', 'Centro', 'Avenida Amazonas', '800', ''),
+      ('48629173539', 'Leonardo Rocha', '31981239876', 'leonardo.rocha@gmail.com', '30470060', 'MG', 'Belo Horizonte', 'Savassi', 'Rua Pernambuco', '600', 'Apto 1202'),
+      ('59832746141', 'Sofia Martins', '11983456790', 'sofia.martins@gmail.com', '03340070', 'SP', 'São Paulo', 'Vila Prudente', 'Rua das Figueiras', '220', ''),
+      ('47283916541', 'Matheus Carvalho', '11984561239', 'matheus.carvalho@gmail.com', '04020080', 'SP', 'São Paulo', 'Moema', 'Avenida Ibirapuera', '720', 'Apto 1104');
+
+
+INSERT INTO advogado (
+    codigo_oab,
+    nome,
+    telefone,
+    email
+) VALUES
+      ('SP234567', 'Ana Beatriz Souza', '11984567232', 'ana02souza@gmail.com'),
+      ('RJ345678', 'Carlos Eduardo Lima', '21983216575', 'carl03lima@gmail.com'),
+      ('MG456789', 'Mariana Fernandes', '31987654322', 'mariana04fernandes@gmail.com'),
+      ('SP567890', 'Lucas Martins', '11981234568', 'lucas05martins@gmail.com'),
+      ('RJ678901', 'Fernanda Oliveira', '21982345679', 'fernanda06oliveira@gmail.com'),
+      ('MG789012', 'João Pedro Santos', '31981239877', 'joaopedro07santos@gmail.com');
+
+
+INSERT INTO processo (
+    id,
+    numero,
+    data_abertura,
+    data_encerramento,
+    status,
+    descricao,
+    tipo,
+    vara,
+    valor_causa,
+    advogado_id,
+    cliente_id,
+    localizacao
+) VALUES
+      (1, '00012345620238260001', '2025-01-10', '2025-06-15', 'Ativo', 'Ação de cobrança de dívida', 'Cível', '1ª vara cível', 5000, 'SP234567', '32847165902', 'Gaveta 2, Armário B'),
+      (2, '00022345620238260002', '2025-03-12', NULL, 'Ativo', 'Ação trabalhista referente a horas extras', 'Trabalhista', '2ª vara do trabalho', 12000, 'SP234567', '67283910547', 'Pasta Azul, Prateleira 3'),
+      (3, '00032345620238260003', '2025-04-01', '2025-08-20', 'Arquivado', 'Processo criminal por danos materiais', 'Criminal', '3ª vara criminal', 8000, 'RJ345678', '84937261504', 'Gaveta 1, Armário A'),
+      (4, '00042345620238260004', '2025-05-15', NULL, 'Arquivado', 'Ação previdenciária de aposentadoria', 'Previdenciário', '4ª vara previdenciária', 3000, 'MG456789', '59283746109', 'Google Drive Link: https://drive.google.com/example4'),
+      (5, '00052345620238260005', '2025-06-10', '2025-09-30', 'Suspenso', 'Cobrança de indenização por acidente', 'Cível', '1ª vara cível', 15000, 'SP567890', '73194658203', 'Gaveta 5, Armário C'),
+      (6, '00062345620238260006', '2025-07-01', NULL, 'Ativo', 'Ação de revisão contratual', 'Cível', '1ª vara cível', 10000, 'SP234567', '48629173509', 'Gaveta 1, Armário D'),
+      (7, '00072345620238260007', '2025-07-05', '2025-09-20', 'Ativo', 'Ação trabalhista sobre horas extras', 'Trabalhista', '2ª vara do trabalho', 15000, 'SP234567', '59832746105', 'Google Drive Link: https://drive.google.com/example7'),
+      (8, '00082345620238260008', '2025-07-10', NULL, 'Arquivado', 'Processo criminal por danos morais', 'Criminal', '3ª vara criminal', 7000, 'RJ345678', '47283916504', 'Gaveta 2, Armário F'),
+      (9, '00092345620238260009', '2025-07-12', '2025-10-01', 'Arquivado', 'Ação previdenciária de aposentadoria', 'Previdenciário', '4ª vara previdenciária', 3000, 'MG456789', '68329574109', 'Pasta Verde, Prateleira 5'),
+      (10, '00102345620238260010', '2025-07-15', NULL, 'Ativo', 'Cobrança de indenização por acidente', 'Cível', '1ª vara cível', 12000, 'SP567890', '59283746123', 'Gaveta 3, Armário B'),
+      (11, '00112345620238260011', '2025-08-01', NULL, 'Ativo', 'Ação de cobrança de aluguel', 'Cível', '1ª vara cível', 8000, 'SP234567', '73194658218', 'Gaveta 4, Armário A'),
+      (12, '00122345620238260012', '2025-08-05', '2025-10-10', 'Finalizado', 'Ação trabalhista por rescisão contratual', 'Trabalhista', '2ª vara do trabalho', 12000, 'SP234567', '48629173518', 'Pasta Vermelha, Prateleira 2'),
+      (13, '00132345620238260013', '2025-08-10', NULL, 'Ativo', 'Processo criminal por furto', 'Criminal', '3ª vara criminal', 5000, 'RJ345678', '59832746128', 'Gaveta 5, Armário B'),
+      (14, '00142345620238260014', '2025-08-12', '2025-09-25', 'Finalizado', 'Ação previdenciária de aposentadoria especial', 'Previdenciário', '4ª vara previdenciária', 4000, 'MG456789', '47283916528', 'Google Drive Link: https://drive.google.com/example14'),
+      (15, '00152345620238260015', '2025-08-15', NULL, 'Arquivado', 'Cobrança de indenização por acidente de trânsito', 'Cível', '1ª vara cível', 15000, 'SP567890', '68329574128', 'Gaveta 1, Armário C'),
+      (16, '00162345620238260016', '2025-08-18', '2025-10-05', 'Finalizado', 'Ação trabalhista por acidente no trabalho', 'Trabalhista', '2ª vara do trabalho', 11000, 'SP234567', '59283746134', 'Pasta Azul, Prateleira 1'),
+      (17, '00172345620238260017', '2025-08-20', NULL, 'Suspenso', 'Processo criminal por dano ao patrimônio', 'Criminal', '3ª vara criminal', 9000, 'RJ678901', '73194658239', 'Gaveta 2, Armário D'),
+      (18, '00182345620238260018', '2025-08-22', '2025-11-10', 'Finalizado', 'Ação previdenciária de benefício negado', 'Previdenciário', '4ª vara previdenciária', 3500, 'MG789012', '48629173539', 'Google Drive Link: https://drive.google.com/example18'),
+      (19, '00192345620238260019', '2025-08-25', NULL, 'Suspenso', 'Cobrança de indenização por erro médico', 'Cível', '1ª vara cível', 18000, 'SP234567', '59832746141', 'Gaveta 3, Armário E'),
+      (20, '00202345620238260020', '2025-08-28', '2025-11-15', 'Suspenso', 'Ação trabalhista de horas extras não pagas', 'Trabalhista', '2ª vara do trabalho', 14000, 'SP234567', '47283916541', 'Pasta Verde, Prateleira 3');
+
+
+
+INSERT INTO documento (
+    id,
+    descricao,
+    processo_id
+) VALUES
+      (1, 'Documento de identidade com foto válido em todo o território nacional', 1),
+      (2, 'Comprovante de residência atualizado', 2),
+      (3, 'Certidão de nascimento do autor', 3),
+      (4, 'Laudo pericial anexado ao processo', 4),
+      (5, 'Contrato de prestação de serviços assinado', 5),
+      (6, 'Contrato assinado pelo autor', 6),
+      (7, 'Comprovante de pagamento', 6),
+
+      (9, 'Carta de notificação enviada', 7),
+      (10, 'Termo de rescisão', 7),
+      (11, 'Recibo de horas extras', 7),
+      (12, 'E-mail corporativo', 7),
+
+      (13, 'Boletim de ocorrência', 8),
+      (14, 'Laudo pericial', 8),
+      (15, 'Fotos do incidente', 8),
+
+      (16, 'Documento de identificação', 9),
+      (17, 'Histórico de contribuições', 9),
+      (18, 'Comprovante de residência', 9),
+
+      (19, 'Relatório de acidente', 10),
+      (20, 'Orçamento de reparação', 10),
+      (21, 'Contrato de seguro', 10),
+      (22, 'Declaração médica', 10),
+      (23, 'Contrato de aluguel assinado', 11),
+      (24, 'Comprovante de pagamento do aluguel', 11),
+      (25, 'E-mail de notificação ao locatário', 11),
+
+      (26, 'Termo de rescisão contratual', 12),
+      (27, 'Recibo de férias proporcionais', 12),
+      (28, 'Comprovante de pagamento de horas extras', 12),
+
+      (29, 'Boletim de ocorrência do furto', 13),
+      (30, 'Laudo pericial da cena do crime', 13),
+      (31, 'Declaração de testemunhas', 13),
+
+      (32, 'Documento de identificação', 14),
+      (33, 'Histórico de contribuições', 14),
+      (34, 'Comprovante de residência', 14),
+
+      (35, 'Relatório do acidente de trânsito', 15),
+      (36, 'Orçamento de reparação do veículo', 15),
+      (37, 'Declaração médica do acidente', 15),
+
+      (38, 'Laudo de acidente de trabalho', 16),
+      (39, 'Atestado médico do trabalhador', 16),
+      (40, 'Relatório de inspeção de segurança', 16),
+
+      (41, 'Boletim de ocorrência por dano', 17),
+      (42, 'Fotos do patrimônio danificado', 17),
+      (43, 'Declaração de testemunhas', 17),
+
+      (44, 'Documentação de benefício negado', 18),
+      (45, 'Comprovante de contribuições faltantes', 18),
+      (46, 'Formulário de requerimento', 18),
+
+      (47, 'Relatório médico detalhado', 19),
+      (48, 'Orçamento de indenização', 19),
+      (49, 'Contrato de seguro', 19),
+
+      (50, 'Recibos de horas extras', 20),
+      (51, 'Termo de rescisão complementar', 20),
+      (52, 'E-mails de comunicação corporativa', 20);
+
+
+
+INSERT INTO prazo (
+    id,
+    assunto,
+    data_hora,
+    processo_id
+) VALUES
+      (1, 'Audiência de conciliação', '2025-10-17 09:30:00', 1),
+      (2, 'Entrega de documentos adicionais', '2025-11-05 14:00:00', 2),
+      (3, 'Reunião com perito', '2025-09-20 10:00:00', 3),
+      (4, 'Apresentação de defesa', '2025-10-22 15:30:00', 4),
+      (5, 'Audiência de instrução', '2025-11-10 09:00:00', 5),
+      (6, 'Audiência preliminar', '2025-07-20 09:00:00', 6),
+      (7, 'Entrega de documentos', '2025-07-25 10:30:00', 6),
+      (8, 'Reunião com perito', '2025-08-01 14:00:00', 6),
+
+      (9, 'Audiência trabalhista', '2025-08-05 09:30:00', 7),
+      (10, 'Prazo para contestação', '2025-08-12 15:00:00', 7),
+      (11, 'Reunião de conciliação', '2025-08-20 11:00:00', 7),
+
+      (12, 'Depoimento de testemunha', '2025-08-10 10:00:00', 8),
+      (13, 'Entrega de provas', '2025-08-18 14:30:00', 8),
+      (14, 'Audiência de instrução', '2025-08-25 09:00:00', 8),
+
+      (15, 'Protocolo de recurso', '2025-08-15 13:00:00', 9),
+      (16, 'Reunião com advogado', '2025-08-22 10:30:00', 9),
+      (17, 'Entrega de documentos adicionais', '2025-08-30 11:00:00', 9),
+
+      (18, 'Audiência de conciliação', '2025-08-20 09:30:00', 10),
+      (19, 'Perícia médica', '2025-08-27 14:00:00', 10),
+      (20, 'Prazo para contestação', '2025-09-05 11:00:00', 10),
+      (21, 'Audiência inicial', '2025-09-01 10:00:00', 11),
+      (22, 'Entrega de documentos', '2025-09-05 14:30:00', 11),
+      (23, 'Reunião com advogado', '2025-09-10 09:00:00', 11),
+
+      (24, 'Audiência trabalhista', '2025-09-12 09:30:00', 12),
+      (25, 'Prazo para contestação', '2025-09-20 11:00:00', 12),
+      (26, 'Depoimento de testemunha', '2025-09-25 10:30:00', 12),
+
+      (27, 'Depoimento de acusado', '2025-09-15 14:00:00', 13),
+      (28, 'Perícia no local do furto', '2025-09-20 09:00:00', 13),
+      (29, 'Audiência de instrução', '2025-09-25 10:00:00', 13),
+
+      (30, 'Entrega de documentos previdenciários', '2025-09-18 15:00:00', 14),
+      (31, 'Reunião com advogado', '2025-09-22 09:30:00', 14),
+      (32, 'Prazo para recurso', '2025-09-28 10:00:00', 14),
+
+      (33, 'Audiência de conciliação', '2025-09-20 09:30:00', 15),
+      (34, 'Perícia médica', '2025-09-25 14:00:00', 15),
+      (35, 'Prazo para contestação', '2025-10-01 11:00:00', 15),
+
+      (36, 'Audiência de instrução', '2025-09-22 10:00:00', 16),
+      (37, 'Entrega de documentos adicionais', '2025-09-28 15:00:00', 16),
+      (38, 'Reunião com perito', '2025-10-03 09:30:00', 16),
+
+      (39, 'Depoimento de testemunha', '2025-09-25 14:00:00', 17),
+      (40, 'Entrega de provas', '2025-09-30 10:30:00', 17),
+      (41, 'Audiência de instrução', '2025-10-05 09:00:00', 17),
+
+      (42, 'Prazo para entrega de documentos', '2025-09-28 13:00:00', 18),
+      (43, 'Reunião com advogado', '2025-10-02 10:30:00', 18),
+      (44, 'Audiência de conciliação', '2025-10-07 09:30:00', 18),
+
+      (45, 'Audiência preliminar', '2025-10-01 09:00:00', 19),
+      (46, 'Entrega de documentos adicionais', '2025-10-05 14:30:00', 19),
+      (47, 'Reunião com perito', '2025-10-10 10:00:00', 19),
+
+      (48, 'Audiência trabalhista', '2025-10-03 09:30:00', 20),
+      (49, 'Prazo para contestação', '2025-10-08 11:00:00', 20),
+      (50, 'Depoimento de testemunha', '2025-10-12 10:30:00', 20);
+

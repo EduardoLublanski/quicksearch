@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active:
+  datasource:
+    url: jdbc:mysql://localhost:3306/quicksearch
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: minha_senha
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  jwt:
+    secretKey: LzAooweXAu8TiOG9I1QouYLxEVY5/zQegUVTELX9is2lG1Fsj6DWI80BZWfJTfio
